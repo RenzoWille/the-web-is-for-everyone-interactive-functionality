@@ -72,11 +72,6 @@ app.post('/', async function (req, res) {
   const artworkJSON = await artworkFetch.json()
 
 // Post naar database
-  await fetch , artworkURL
-
-  response.redirect('/')
-})
-
 await fetch(artworkURL, {
   method: 'POST',
   headers: {
@@ -89,6 +84,8 @@ await fetch(artworkURL, {
     fabrique_art_objects_id: getId
   }),
 })
+})
+
 
 /*
 // Zie https://expressjs.com/en/5x/api.html#app.get.method over app.get()
