@@ -5,6 +5,8 @@ import express from 'express'
 // Importeer de Liquid package (ook als dependency via npm geïnstalleerd)
 import { Liquid } from 'liquidjs';
 
+const loggedInUserID = 3
+
 // Maak een nieuwe Express applicatie aan, waarin we de server configureren
 const app = express()
 
@@ -25,6 +27,68 @@ app.set('views', './views')
 
 
 console.log('Let op: Er zijn nog geen routes. Voeg hier dus eerst jouw GET en POST routes toe.')
+
+//ROUTES
+
+app.get('/', async function (request, response) {
+  const artworkURL = 'https://fdnd-agency.directus.app/items/fabrique_art_objects'
+  const artworkFetch = await fetch(artworkURL)
+
+  const artworkJSON = await artworkFetch.json()
+
+  response.render('index.liquid', {artworkData: artworkJSON.data}) 
+})
+
+app.get('/details', async function (req, res) {
+  const artworkURL = 'https://fdnd-agency.directus.app/items/fabrique_art_objects'
+  
+  const artworkFetch = await fetch(artworkURL)
+
+  const artworkJSON = await artworkFetch.json()
+
+  response.render('details.liquid', {artworkData: artworkJSON.data})
+})
+
+app.get('/art', async function (req, res) {
+  const artworkURL = 'https://fdnd-agency.directus.app/items/fabrique_art_objects'
+  
+  const artworkFetch = await fetch(artworkURL)
+
+  const artworkJSON = await artworkFetch.json()
+
+  response.render('art.liquid', {artworkData: artworkJSON.data})
+})
+
+// POST
+
+app.post('/', async function (req, res) {
+
+  // Liked list
+  const artworkURL = 'https://fdnd-agency.directus.app/items/fabrique_users_fabrique_art_objects?filter=%7B%22fabrique_users_id%22:1%7D'
+  const artworkLikes = '?filter={"fabrique_users_id":1,"fabrique_art_objects_id":"33"}'
+
+  const artworkFetch = await fetch(artworkURL + artworkLikes)
+
+  const artworkJSON = await artworkFetch.json()
+
+// Post naar database
+  await fetch , artworkURL
+
+  response.redirect('/')
+})
+
+await fetch(artworkURL, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    // naam in database: id van de user
+    fabrique_users_id: loggedInUserID,
+    // naam in database: id van item die je wilt toevoegen
+    fabrique_art_objects_id: getId
+  }),
+})
 
 /*
 // Zie https://expressjs.com/en/5x/api.html#app.get.method over app.get()
