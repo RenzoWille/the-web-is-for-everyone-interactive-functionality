@@ -1,0 +1,205 @@
+/* Algemene styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 20px;
+
+    svg {
+        width: 200px;
+        height: 100px;
+    }
+}
+
+/* Hero image */
+.hero {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.7px);
+    -webkit-backdrop-filter: blur(3.7px);
+}
+
+/* Hamburger button */
+.hamburger-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    z-index: 10;
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: 1024px) {
+        display: none;
+    }
+}
+
+/* Menu */
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffe40c;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+
+    ul {
+        list-style: none;
+        padding-right: 50px;
+        margin: 0;
+    }
+
+    ul li {
+        margin: 20px 0;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: calc(1rem + 1vw);
+        font-weight: bold;
+    }
+
+    /* Maak het menu standaard zichtbaar en horizontaal vanaf 1024px */
+    @media (min-width: 1024px) {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        transform: none;
+        display: flex;
+        flex-direction: row;
+        align-items: right;
+        gap: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Zorgt ervoor dat de logo links en de navigatie rechts staat */
+        padding: 0 20px;
+    }
+
+    .menu ul {
+        display: flex;
+        gap: 20px; /* Voegt ruimte tussen de menu-items */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu {
+        margin-left: auto; /* Duwt het menu naar rechts */
+    }
+
+    .menu ul li {
+        display: inline-block;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 1em;
+    }
+
+    .tickets-container {
+        padding-top: 1.5em;
+
+        .tickets {
+            display: block;
+            height: 2rem;
+            line-height: 2rem;
+            overflow: hidden;
+            text-align: center;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 100%;
+            background-color: #ffe40c;
+            border: 1px solid black;
+            text-decoration: none;
+            color: black;
+            width: 6em;
+            font-size: 1em;
+        }    
+
+    }
+
+    
+}
+
+
+
+.menu.open {
+    transform: translateX(0);
+}
+
+/* Art Images */
+.art-images {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    gap: 1em;
+    padding: 20px;
+
+    img {
+        height: 300px;
+        border: 2px solid #ffffff;
+        border-radius: 20px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    img:hover {
+        transform: scale(1.05);
+    }
+
+    li {
+        list-style-type: none;
+    }
+}
+
+/* Extra styling voor responsiviteit */
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .art-images {
+        justify-content: center;
+    }
+
+    .art-images img {
+        height: 200px;
+    }
+}
