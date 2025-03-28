@@ -40,11 +40,11 @@ app.get('/', async function (request, response) {
 })
 
 app.get('/details/:id', async function (request, response) {
-  const artworkURL = 'https://fdnd-agency.directus.app/items/fabrique_art_objects'
-  
+  const artworkURL = `https://fdnd-agency.directus.app/items/fabrique_art_objects?filter[id][_eq]=${request.params.id}`;
   const artworkFetch = await fetch(artworkURL)
 
   const artworkJSON = await artworkFetch.json()
+  console.log(artworkJSON)
 
   response.render('details.liquid', {
     artworkData: artworkJSON.data
