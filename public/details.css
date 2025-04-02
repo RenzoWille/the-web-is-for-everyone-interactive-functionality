@@ -1,6 +1,42 @@
-.title-block {
-    .post-title {
-        border: 1px solid black;
+.artwork-empty, .artwork-liked {
+    display: grid;
+    place-content: center;
+
+    .artwork-wrapper {
+        background: rgba(0, 0, 0, 0.20);
+        border-radius: 20px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(3.7px);
+        -webkit-backdrop-filter: blur(3.7px);
+        color: #ffffff;
     }
-    
+
+
+    .post-title {
+        padding: .5em;
+        border: 1px solid #ffffff;
+        border-bottom: none;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .post-image {
+        padding: .5em;
+        border: 1px solid #ffffff;
+        display: grid;
+        place-items: center;
+    }
+
+    .post-like {
+        padding: .5em;
+        border: 1px solid #ffffff;
+        border-top: none;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        button {
+            background: none;
+            border: none;
+        }
+    }
 }
