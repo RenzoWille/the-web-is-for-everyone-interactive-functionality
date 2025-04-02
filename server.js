@@ -26,7 +26,6 @@ app.engine('liquid', engine.express());
 app.set('views', './views')
 
 
-// console.log('Let op: Er zijn nog geen routes. Voeg hier dus eerst jouw GET en POST routes toe.')
 
 //ROUTES
 
@@ -42,9 +41,9 @@ app.get('/', async function (request, response) {
 app.get('/details/:id', async function (request, response) {
   console.log("GET detail pagina met een id "+request.params.id)
 
-  //const  de links naar de verschillende data
-  // hier moet je en fetch doen die de data van het artwork ophaalt
-  // plus uit een andere tabel halen of het artwork een like heeft!
+  // Const  de links naar de verschillende data
+  // Hier moet je en fetch doen die de data van het artwork ophaalt
+  // Plus uit een andere tabel halen of het artwork een like heeft!
 
   const artworkURL = `https://fdnd-agency.directus.app/items/fabrique_art_objects?filter[id][_eq]=${request.params.id}&fields=*,fabrique_users_fabrique_art_objects.*`;
 
@@ -72,13 +71,13 @@ app.get('/art', async function (req, res) {
 })
 
 // POST
-//deze post is voor het liken van een artwork
+// Deze post is voor het liken van een artwork
 app.post('/like-artwork/:id', async function (request, response) {
   console.log("we hebben een post " + request.params.id)
 
   // Hier wil je een fetch naar Directus waarmee je een like oplsaat die hoort bij eeen artwork
-  // const artworkURL = `https://fdnd-agency.directus.app/items/fabrique_users_fabrique_art_objects?filter=%7B%22fabrique_users_id%22:1%7D`
-  // const artworkLikes = `https://fdnd-agency.directus.app/items/fabrique_users_fabrique_art_objects?filter={"fabrique_users_id":1,"fabrique_art_objects_id":[id][_eq]=${request.params.id}`
+  // Const artworkURL = `https://fdnd-agency.directus.app/items/fabrique_users_fabrique_art_objects?filter=%7B%22fabrique_users_id%22:1%7D`
+  // Const artworkLikes = `https://fdnd-agency.directus.app/items/fabrique_users_fabrique_art_objects?filter={"fabrique_users_id":1,"fabrique_art_objects_id":[id][_eq]=${request.params.id}`
   const postLikeUrl = `https://fdnd-agency.directus.app/items/fabrique_users_fabrique_art_objects?filter={"fabrique_users_id":1,"fabrique_art_objects_id":[id][_eq]=${request.params.id}`
   console.log("postLikeUrl " + postLikeUrl)
 
@@ -91,9 +90,9 @@ app.post('/like-artwork/:id', async function (request, response) {
     body: JSON.stringify({
       //"fabrique_users_id": 1,
       //"fabrique_art_objects_id": 33,
-      // naam in database: id van de user
+      // Naam in database: id van de user
       fabrique_users_id: 3,
-      // naam in database: id van item die je wilt toevoegen
+      // Naam in database: id van item die je wilt toevoegen
       fabrique_art_objects_id: request.params.id
     }),
   })
