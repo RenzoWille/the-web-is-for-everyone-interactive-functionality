@@ -20,10 +20,10 @@ In je Readme staat bij beschrijving wat voor project het is en wat je hebt gemaa
 
 Dit project beschrijft de website van Qatar Museums, hiervoor is er een home en detail pagina gemaakt van een like functie op de verschillende kunstwerken. Bezoekers van de website kunnen kunstwerken liken, en zien hoeveel andere mensen een kunstwerk heeft geliked. Zo is er te zien welk kunstwerk het meest populair is.
 
-# Home pagina
+### Home pagina
 <img width="1440" alt="Scherm­afbeelding 2025-04-02 om 10 17 31" src="https://github.com/user-attachments/assets/c0fb17dd-02e5-47c6-b891-3c058d30671a" />
 
-# Detail pagina
+### Detail pagina
 <img width="1440" alt="Scherm­afbeelding 2025-04-02 om 10 17 18" src="https://github.com/user-attachments/assets/293d97d3-376d-4d97-8082-78b554102716" />
 
 https://the-web-is-for-everyone-interactive-d9vm.onrender.com/
@@ -34,7 +34,7 @@ https://the-web-is-for-everyone-interactive-d9vm.onrender.com/
 ## Gebruik
 <!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
 
-# User Story
+### User Story
 
 Bezoekers kunnen net als op een social media platform, klikken naar meerdere foto's om een beter idee te krijgen van het kunstwerk. Wanneer bezoekers op de art pagina komen, kunnen ze deze beoordelen en een like geven.
 
@@ -42,7 +42,7 @@ Als de bezoeker een kunstwerk een like geeft, komt hier een 'count' te staan en 
 
 Zo worden de verschillende kunstwerken beoordeeld en kunnen bezoekers zien welke het meest populair is, en welke kunstwerken minder populair zijn.
 
-# Hoe het werkt 
+### Hoe het werkt 
 
 Bezoekers kunnen via de home pagina op een bepaald kunstwerk klikken en deze een like geven op de detail pagina. Het aantal likes wordt bijgehouden in de database en dit krijgen bezoekers ook terug als feedback wanneer een kunstwerk is geliked.
 
