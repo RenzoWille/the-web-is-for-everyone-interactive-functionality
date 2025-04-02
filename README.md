@@ -49,6 +49,11 @@ Bezoekers kunnen via de home pagina op een bepaald kunstwerk klikken en deze een
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framework of library gebruikt? -->
 
+Toon screenshots of een video van de UI-stack states die je hebt ontworpen en gebouwd, en leg per state uit hoe de code werkt.
+
+De website is gebouwd met NodeJS, Express, Liquid en Directus voor server-side en HTML, CSS en JavaScript voor client-side scripting. Er is gebruik gemaakt van Progressive Enhancement, een techniek die ervoor zorgt dat de code altijd blijft werken, ook wanneer bezoeker vanaf een verouderde browser op het internet surfen, of bezoekers die JavaScript uit hebben staan in hun browser. Hiermee zorg je er dus voor dat de website altijd blijft werken.
+
+
 ## Installatie
 <!-- Bij Installatie staat hoe een andere developer aan jouw repo kan werken -->
 
