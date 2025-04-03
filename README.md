@@ -59,6 +59,13 @@ Voor het gebruik van dit project is het nodig om <a href="https://nodejs.org/en"
 
 
 ## Bronnen
+https://qm.org.qa/en/
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
+https://liquidjs.com/tags/for.html
+https://directus.io/docs/api
+https://www.scotthurff.com/posts/why-your-user-interface-is-awkward-youre-ignoring-the-ui-stack/
+https://blog.logrocket.com/how-browser-rendering-works-behind-scenes/
+
 
 ## Licentie
 
