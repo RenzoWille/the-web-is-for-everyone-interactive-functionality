@@ -49,13 +49,13 @@ Bezoekers kunnen via de home pagina op een bepaald kunstwerk klikken en deze een
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framework of library gebruikt? -->
 
-Toon screenshots of een video van de UI-stack states die je hebt ontworpen en gebouwd, en leg per state uit hoe de code werkt.
-
 De website is gebouwd met NodeJS, Express, Liquid en Directus voor server-side en HTML, CSS en JavaScript voor client-side scripting. Er is gebruik gemaakt van Progressive Enhancement, een techniek die ervoor zorgt dat de code altijd blijft werken, ook wanneer bezoeker vanaf een verouderde browser op het internet surfen, of bezoekers die JavaScript uit hebben staan in hun browser. Hiermee zorg je er dus voor dat de website altijd blijft werken.
 
 
 ## Installatie
 <!-- Bij Installatie staat hoe een andere developer aan jouw repo kan werken -->
+
+Voor het gebruik van dit project is het nodig om <a href="https://nodejs.org/en">NodeJS</a> te installeren op uw apparaat. Vanuit hier kunt u dit project gaan runnen in uw bestand en zelf ook aan het project werken. Wanneer NodeJS is geïnstalleerd kunt u via de terminal het pakket installeren met de command 'npm install'. Hiermee worden alle bestanden geïnstalleerd en wordt ervoor gezorgd dat het hele project ready to go is. Als u dan een link naar een locale server wilt krijgen om het project te zien, typ 'npm start' en klik vervolgens op de link die wordt gegeven. Dit zal een 'localhost:8000' link zijn. Nu bent u helemaal klaar en kunt u aan de slag met werken aan dit project.
 
 
 ## Bronnen
