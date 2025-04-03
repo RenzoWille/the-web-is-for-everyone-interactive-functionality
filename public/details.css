@@ -16,10 +16,6 @@
         background-color: rgba(0, 0, 0, 0.20);
     }
 
-    @supports (-webkit-backdrop-filter: blur(3.7px)) {
-        background-color: rgba(0, 0, 0, 0.20);
-    }
-
 
     .post-title {
         padding: .5em;
