@@ -10,12 +10,14 @@
         backdrop-filter: blur(3.7px);
         -webkit-backdrop-filter: blur(3.7px);
         color: #ffffff;
+
+        @supports (backdrop-filter: blur(3.7px)) {
+            background-color: rgba(0, 0, 0, 0.20);
+        }
+    
     }
 
-    @supports (backdrop-filter: blur(3.7px)) {
-        background-color: rgba(0, 0, 0, 0.20);
-    }
-
+    
 
     .post-title {
         padding: .5em;
